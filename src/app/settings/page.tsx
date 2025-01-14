@@ -3,6 +3,33 @@
 import { useState } from 'react';
 import { BellIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
+interface DiscordIntegration {
+  name: string;
+  connected: boolean;
+  webhookUrl: string;
+  roles: string[];
+}
+
+interface TelegramIntegration {
+  name: string;
+  connected: boolean;
+  botToken: string;
+  groups: string[];
+}
+
+interface TwitterIntegration {
+  name: string;
+  connected: boolean;
+  apiKey: string;
+  apiSecret: string;
+}
+
+interface IntegrationSettings {
+  discord: DiscordIntegration;
+  telegram: TelegramIntegration;
+  twitter: TwitterIntegration;
+}
+
 const notificationSettings = [
   {
     id: 'new-members',
@@ -51,7 +78,7 @@ const automationSettings = [
   },
 ];
 
-const integrationSettings = {
+const integrationSettings: IntegrationSettings = {
   discord: {
     name: 'Discord',
     connected: true,
@@ -190,7 +217,7 @@ export default function SettingsPage() {
                   </div>
                   {platform.connected && (
                     <div className="mt-4 space-y-4">
-                      {platform.webhookUrl && (
+                      {key === 'discord' && 'webhookUrl' in platform && (
                         <div>
                           <label className="block text-sm font-medium text-gray-700">Webhook URL</label>
                           <input
@@ -201,7 +228,7 @@ export default function SettingsPage() {
                           />
                         </div>
                       )}
-                      {platform.botToken && (
+                      {key === 'telegram' && 'botToken' in platform && (
                         <div>
                           <label className="block text-sm font-medium text-gray-700">Bot Token</label>
                           <input
@@ -212,7 +239,7 @@ export default function SettingsPage() {
                           />
                         </div>
                       )}
-                      {platform.roles && (
+                      {'roles' in platform && platform.roles && (
                         <div>
                           <label className="block text-sm font-medium text-gray-700">Roles</label>
                           <div className="mt-1 flex flex-wrap gap-2">
@@ -227,7 +254,7 @@ export default function SettingsPage() {
                           </div>
                         </div>
                       )}
-                      {platform.groups && (
+                      {'groups' in platform && platform.groups && (
                         <div>
                           <label className="block text-sm font-medium text-gray-700">Groups</label>
                           <div className="mt-1 flex flex-wrap gap-2">
