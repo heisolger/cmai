@@ -243,7 +243,7 @@ export default function SettingsPage() {
                         <div>
                           <label className="block text-sm font-medium text-gray-700">Roles</label>
                           <div className="mt-1 flex flex-wrap gap-2">
-                            {platform.roles.map((role) => (
+                            {platform.roles.map((role: string) => (
                               <span
                                 key={role}
                                 className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800"
@@ -258,7 +258,7 @@ export default function SettingsPage() {
                         <div>
                           <label className="block text-sm font-medium text-gray-700">Groups</label>
                           <div className="mt-1 flex flex-wrap gap-2">
-                            {platform.groups.map((group) => (
+                            {platform.groups.map((group: string) => (
                               <span
                                 key={group}
                                 className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800"
