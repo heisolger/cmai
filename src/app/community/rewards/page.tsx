@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { TrophyIcon, StarIcon, FireIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { TrophyIcon, StarIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 const topContributors = [
   {

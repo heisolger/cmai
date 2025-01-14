@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { BellIcon, ShieldCheckIcon, CurrencyDollarIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+import { BellIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
 const notificationSettings = [
   {

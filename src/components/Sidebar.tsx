@@ -5,7 +5,6 @@ import {
   ChartBarIcon,
   UsersIcon,
   Cog6ToothIcon,
-  ChatBubbleLeftRightIcon,
   ShareIcon,
   DocumentTextIcon,
   UserGroupIcon,

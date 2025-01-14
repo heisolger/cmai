@@ -2,10 +2,6 @@
 
 import { useState } from 'react';
 import {
-  ChartBarIcon,
-  UserGroupIcon,
-  ChatBubbleLeftRightIcon,
-  ArrowTrendingUpIcon,
   ArrowUpIcon,
   ArrowDownIcon,
 } from '@heroicons/react/24/outline';

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { ArrowUpIcon, ArrowDownIcon, BoltIcon, RocketLaunchIcon, SparklesIcon, CommandLineIcon } from '@heroicons/react/24/solid';
-import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline';
 
 const metrics = [
   { name: 'Community Sentiment', value: '85%', trend: 'up', change: '2.3%', description: 'Overall positive engagement' },
